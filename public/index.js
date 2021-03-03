@@ -51,10 +51,3 @@ fileInput.addEventListener("change",()=>{
 Browse.addEventListener("click",()=>{
     fileInput.click()
 })
-
-//whenver client do request to live server
-//modern browser blocked this kind of request for the security purpose
-//for this problem we can use proxy like in react angular but here in this project we will be handling at server side
-//at server we will set up cors middleware
-//before main request pre request is send in which we have to add cors headers so browser check whether we forward main request or not if received header then second request successfully sent
-
