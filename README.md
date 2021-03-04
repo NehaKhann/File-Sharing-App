@@ -3,7 +3,10 @@
 ## 🏹[Visit Website](https://neha-khan-file-share.herokuapp.com "File Share")
 
 # App Demo
-_Main Page_
+![image](https://user-images.githubusercontent.com/65183230/109997001-91ec8b00-7d31-11eb-92f7-804d5a97d78c.png)
+![image](https://user-images.githubusercontent.com/65183230/109997242-d1b37280-7d31-11eb-9148-1dded82a7dac.png)
+![image](https://user-images.githubusercontent.com/65183230/109997346-ed1e7d80-7d31-11eb-89f2-d2a0ff9db8c0.png)
+![image](https://user-images.githubusercontent.com/65183230/109997382-f576b880-7d31-11eb-95ce-85ed553ade4a.png)
 
 
 
