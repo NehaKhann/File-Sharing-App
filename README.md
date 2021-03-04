@@ -22,12 +22,12 @@
 
 3. Once you done with uploading file a link will be provided which you can share with others with the help of which anyone can easily download that file.
 
-4. You can either email a file which provide the download file option as well.
+4. You can either email a file which provides the download file option as well.
 
 **🤯 Remember! After 24 hours the files will be expired and automatically removed from the database.**
 
 
-_🤩This application is completely responsive with amazing transition, it’s very simple and easy to useOnce you upload the files, you get a link to the file which you can share._
+_🤩This application is completely responsive with amazing transition, it’s very simple and easy to use Once you upload the files, you get a link to the file which you can share._
 
 ## Getting Started
 
