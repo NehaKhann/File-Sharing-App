@@ -1,3 +1,9 @@
+:root {
+  --container-width: 500px;
+}
+html{
+  overflow: hidden;
+}
 body {
   font-family: system-ui;
   background: #9cada4;
@@ -22,14 +28,14 @@ body,
   box-shadow: 0px 20px 20px 0px #00000017;
 }
 .drop-zone {
-  width: 500px;
+  width: var(--container-width);
   min-height: 200px;
   border: 3px dashed #333;
   margin: 30px;
   border-radius: 20px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
-.dragged.drop-zone{
+.dragged.drop-zone {
   background: cadetblue;
   border-color: darkcyan;
 }
@@ -63,12 +69,146 @@ body,
 .dragged .left-img {
   transform: rotate(-10deg) scale(0.9) translateX(-20px);
 }
-#fileInput{
+#fileInput {
   display: none;
 }
-.Browse{
-  color:rgb(23, 158, 23);
+.Browse {
+  color: rgb(23, 158, 23);
   cursor: pointer;
+}
+/* progress-container */
+.progress-container {
+  width: var(--container-width);
+  height: 80px;
+  border: 3px solid black;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  position: relative;
+  display: none;
+}
+.progress-container .bg-progress {
+  background: #67bb87;
+  width: 0%;
+  height: 100%;
+  border-radius: 3%;
+
+
+  transition: width 0.25s linear;
+  position: absolute;
+}
+.progress-container .inner-container {
+  position: absolute;
+  z-index: 1;
+  margin: 10px 15px;
+  width:calc(100% - 30px);
+}
+.percent-container{
+  font-size: 13px;
+  margin: 5px;
+  opacity: 0.9;
+
+}
+.progress-bar{
+  background: #128b41;
+  height: 3px;
+  width:100%;
+  border-radius: 2px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.25s linear;
+
+}
+/* input-container */
+.sharing-container{
+  width: var(--container-width);
+  margin-bottom: 30px;
+  display: none;
+}
+ p{
+  opacity: 0.7;
+  text-align: center;
+}
+.sharing-container .input-container{
+  position: relative;
+ 
+}
+.sharing-container .input-container input{
+  width:100%;
+  border: 2px dashed black;
+  border-radius: 3px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+  background: #67bb87;
+  opacity: 0.8;
+  color:#163b25;
+}
+.input-container img{
+  position: absolute;
+  height:22px;
+  width:30px;
+  right:7px;
+  top:12px;
+  background: #67bb87;
+  cursor: pointer;
+}
+
+/* email container */
+
+.email-container{
+  display: flex;
+  align-items: center;
+}
+.email-container label{
+  font-size: 20px;
+}
+.email-container input{
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+  background: #e0ece4;
+}
+.email-container input:focus{
+  outline: none;
+}
+.email-container form{
+  width: 100%;
+  border:2px solid black;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.email-container .field{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  width: 400px;
+}
+
+.email-container button {
+  font-size: 15px;
+  padding: 8px 40px;
+  margin-top: 15px;
+  background: #67bb87;
+  border: none;
+  border-radius: 5px;
+  opacity: 0.7;
+ cursor: pointer;
+}
+.alert{
+  position: absolute;
+  bottom:10px;
+  left:50%;
+  transform:translate(-50%,60px);
+  padding:10px 20px;
+  border-radius: 5px;
+  background:#67bb87 ;
+  color:#fff;
+  font-size: 18px;
+  transition: transform ease-in-out 0.2s;
 }
 section.download {
   background: #e0ece4;
@@ -114,4 +254,24 @@ h3 {
 
 .send-btn-container a:hover {
   background: var(--dark-blue);
+}
+.upload-background {
+  width: 50vw;
+  height: 50vh;
+  background: url(/img/background.svg) no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 900px) {
+  :root {
+    --container-width: 320px;
+  }
+  .upload-background  {
+    display: none;
+  }
+  .email-container .field {
+    flex-direction: column;
+  }
+  .email-container .field {
+    width: 300px;
+  }
 }
